@@ -38,7 +38,11 @@ car_classifier/
 └── test/
     ├── Audi/
     ├── Hyundai Creta/
-    ├── ...
+    ├── Mahindra Scorpio/
+    ├── Rolls Royce/
+    ├── Swift/
+    ├── Tata Safari/
+    └── Toyota Innova/
 ```
  
 > **Note:** `ImageFolder` assigns class labels automatically based on the alphabetical order of subdirectories — it does **not** use any hardcoded class name list. Make sure both `training/` and `test/` contain exactly the same 7 class folders (no stray/hidden folders), or training will fail with a CUDA `device-side assert` error due to out-of-range labels.
