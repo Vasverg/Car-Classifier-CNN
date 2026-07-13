@@ -47,7 +47,7 @@ def showimg(img):
 
 
 #CNN
-class CarDetector(nn.Module):
+class CarClassifier(nn.Module):
     def __init__(self):
         super().__init__()
         self.conv1 = nn.Conv2d (3, 32, kernel_size = 3, padding = 1)
@@ -70,7 +70,7 @@ class CarDetector(nn.Module):
         x = self.fc2(x)
         return x
     
-model = CarDetector().to(device)
+model = CarClassifier().to(device)
 loss = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 epochsnum = 50
